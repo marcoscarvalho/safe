@@ -1,6 +1,5 @@
 {
   "name": "Safe",
-  "short_name": "Safe",
   "theme_color": "#afa061",
   "background_color": "#3c3c3c",
   "display": "standalone",
