@@ -10,7 +10,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="bower_components/paper-styles/color.html">
 <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="bower_components/paper-button/paper-button.html">
-<dom-module id="na-editor">
+<link rel="import" href="na-note-safe.html">
+
+<dom-module id="na-editor-safe">
   <template>
     <style>
       :host {
@@ -48,14 +50,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         transform-origin: 128px 128px;
       }
 
-      na-note {
+      na-note-safe {
         display: block;
         position: absolute;
         top: 0px;
         left: 0px;
       }
 
-      :host(.open) na-note {
+      :host(.open) na-note-safe {
         position: relative;
         margin: auto;
         width: calc(100vw - 20px);
@@ -80,7 +82,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
     <div id="background"></div>
-    <na-note id="note" title="{{note.title}}" body="{{note.body}}" editable></na-note>
+    <na-note-safe id="note" title="{{note.title}}" body="{{note.body}}" editable></na-note-safe>
     <div class="controls">
       <paper-button on-tap="delete">Apagar</paper-button>
       <paper-button on-tap="save">Salvar</paper-button>
@@ -88,7 +90,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
   <script>
     Polymer({
-      is: 'na-editor',
+      is: 'na-editor-safe',
 
       properties: {
         note: {

@@ -7,12 +7,12 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-<link rel="import" href="../paper-styles/shadow.html">
-<link rel="import" href="../paper-styles/typography.html">
-<link rel="import" href="../iron-input/iron-input.html">
-<link rel="import" href="../iron-autogrow-textarea/iron-autogrow-textarea.html">
+<link rel="import" href="bower_components/paper-styles/shadow.html">
+<link rel="import" href="bower_components/paper-styles/typography.html">
+<link rel="import" href="bower_components/iron-input/iron-input.html">
+<link rel="import" href="bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html">
 
-<dom-module id="na-note">
+<dom-module id="na-note-safe">
   <template>
     <style>
       :host {
@@ -97,11 +97,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
     <template is="dom-if" if="[[editable]]">
-      <input is="iron-input" placeholder="Adicionar aqui"
+      <input is="iron-input" placeholder="Adicionar Título"
           bind-value="{{title}}">
       </input>
       <iron-autogrow-textarea
-          placeholder="Corpo"
+          placeholder="Adicionar Descrição"
           bind-value="{{body}}">
       </iron-autogrow-textarea>
     </template>
@@ -113,7 +113,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
   <script>
     Polymer({
-      is: 'na-note',
+      is: 'na-note-safe',
 
       properties: {
         editable: {
