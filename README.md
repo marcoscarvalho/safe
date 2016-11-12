@@ -1,28 +1,35 @@
 #Safe Management
 ==============
 ## Atores
- - Executor
+ - Desenvolvedor
+ - Coordenador 
+ - Gerente
 
 ## Problema
-Hoje existe-se um cenário onde tem-se várias demandas planejadas e/ou demandas com dias marcados. Mas em todos os momentos, entra-se novas mini-demandas que não são planejadas quebrando o planejamento atual e deixando todos os envolvidos não confortáveis.
+Hoje existe-se um cenário onde tem-se várias demandas planejadas e/ou demandas com dias marcados. Mas em todos os momentos, entram-se novas mini-demandas que não são planejadas quebrando o planejamento atual e deixando todos os envolvidos não confortáveis.
+
+## Objetivo
  
- - Demandas padrões entram diretamente após todas as demandas.
- - Demandas entrando-se a todos os momentos e pode-se ter demandas com dias marcados.
- - Caso entre alguma demanda no meio de outras, é necessário arrastar as demandas (tirando as agendadas).
- - Caso conflite com demanda agendada, validar se a prioridade é maior.
- - Necessidade de criar-se um histórico por executor
+## Histórias
+ 
+###
+ 
+## Necessidades
+ - Necessidade de criar um histórico por executor
+ - Necessidade de criar um histórico por coordenador
  - Necessidade de criar um histórico por gerente
 
+## Regras
+ - Uma demanda sem planejamento deve entrar após todas as demais demandas.
+ - Se uma demanda entrar com dia marcado, deve arrastar todas as demais planejadas que serão afetadas, indicando nessas demandas que houve arrasto.
+ - Caso conflite com demanda agendada, validar qual a prioridade é maior e informar o usuário.
+
 ### Demanda
- - Toda demanda deve ter um nome 
- - A demanda pode ter um dono e um executor
- - A demanda pode ter horário de início e horário de fim.
- - A demanda pode ter quantidade de horas necessárias para sua realização
- - A demanda pode ter tags
+ - Uma nova demanda deve ter um título.
+ - Uma demanda pode ter descrição, data de início, data de fim, duração planejada, checklist, prioridade, criador, executor e tags.
  
 ### Tag
  - Pode ser criado qualquer tipo de tags
- 
  Exemplos:
  - Pode existir uma tag de "horário de trabalho extendido ativo"
  
@@ -30,7 +37,6 @@ Hoje existe-se um cenário onde tem-se várias demandas planejadas e/ou demandas
  - Pode-se adicionar quantas prioridades forem necessárias
  - Toda prioridade deve ter um nome, uma descrição e uma cor
  - Enquadrar-se em um grau de prioridade
- 
  Exemplos:
  - Prioridade 0 - Problemas com sistemas de vendas
  - Demanda Agendada
@@ -48,9 +54,3 @@ Hoje existe-se um cenário onde tem-se várias demandas planejadas e/ou demandas
  
 ### Histórico
  - Mostrar em uma linha do tempo as demandas, quantidade de tempo planejado, executado e a prioridade dessa demanda.
-
-## Objetivo
- 
-## Histórias
- 
-###
